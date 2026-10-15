@@ -1,3 +1,16 @@
 [
-  "obsidian-discordrpc"
+  "obsidian-discordrpc",
+  "dataview",
+  "templater-obsidian",
+  "obsidian-tasks-plugin",
+  "obsidian-kanban",
+  "calendar",
+  "table-editor-obsidian",
+  "quickadd",
+  "omnisearch",
+  "obsidian-style-settings",
+  "obsidian-linter",
+  "obsidian-icon-folder",
+  "obsidian-minimal-settings",
+  "obsidian-local-rest-api"
 ]

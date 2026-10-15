@@ -1,24 +1,7 @@
 ---
-date: "{{date}}"
-time: "{{time}}"
 tags:
   - daily
-  - journal
 ---
+## Notes
 
-# 📅 {{date}}
-
-## 🎯 Top Priorities
-- [ ] 
-- [ ] 
-- [ ] 
-
-## 📝 Log & Notes
-- 
-
-## 🤖 AI / Agent Activity
-<!-- Logs of automated tasks, agent queries, or summaries -->
-- 
-
-## 💡 Evening Reflection / Key Learnings
-- 
+![[Daily.base]]
