@@ -7,15 +7,15 @@ tags:
 
 ## 📥 Backlog
 
-- [ ] Explore Steph Ango's [[Categories/Books|Books Hub]] and [[Categories/Projects|Projects Hub]]
-- [ ] Test creating a note with [[Templates/Book Template]]
-- [ ] Customize keyboard shortcuts in `Ctrl + ,` -> Hotkeys
+- [x] Explore Steph Ango's [[Categories/Books|Books Hub]] and [[Categories/Projects|Projects Hub]]
+- [x] Test creating a note with [[Templates/Book Template]]
+- [x] Customize keyboard shortcuts in `Ctrl + ,` -> Hotkeys
 - [ ] Connect AI agent / MCP filesystem to vault
 
 ## 🚧 In Progress
 
-- [ ] Explore installed plugins (Dataview, Tasks, Calendar, Kanban)
-- [ ] Customize the Minimal Theme in `Settings` -> `Minimal Theme Settings`
+- [x] Explore installed plugins (Dataview, Tasks, Calendar, Kanban)
+- [x] Customize the Minimal Theme in `Settings` -> `Minimal Theme Settings`
 
 ## ✅ Done
 
