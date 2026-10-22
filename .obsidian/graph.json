@@ -1,22 +1,72 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
-  "showArrow": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:01 - Projects",
+      "color": {
+        "a": 1,
+        "rgb": 3066993
+      }
+    },
+    {
+      "query": "path:02 - Areas",
+      "color": {
+        "a": 1,
+        "rgb": 46296
+      }
+    },
+    {
+      "query": "path:03 - Resources",
+      "color": {
+        "a": 1,
+        "rgb": 15965202
+      }
+    },
+    {
+      "query": "tag:#roblox",
+      "color": {
+        "a": 1,
+        "rgb": 10181302
+      }
+    },
+    {
+      "query": "tag:#gdd",
+      "color": {
+        "a": 1,
+        "rgb": 15158332
+      }
+    },
+    {
+      "query": "tag:#meta",
+      "color": {
+        "a": 1,
+        "rgb": 15528177
+      }
+    },
+    {
+      "query": "path:Templates",
+      "color": {
+        "a": 1,
+        "rgb": 8359053
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "nodeSizeMultiplier": 1.25,
+  "lineSizeMultiplier": 1.1,
+  "collapse-forces": false,
+  "centerStrength": 0.42,
+  "repelStrength": 12,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.7132754626224407,
+  "linkDistance": 190,
+  "scale": 0.3084542639060297,
   "close": true
 }
