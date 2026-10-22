@@ -141,3 +141,13 @@ All client modules are loaded uniformly by `StarterPlayer.StarterPlayerScripts.M
 ### 3. Combat & Fling Server Verifier
 - Validates melee hitboxes and trap triggers on the server to prevent physics exploits.
 - Enforces network ownership handoffs during ragdoll flings to ensure smooth ragdoll replication across all clients.
+
+---
+
+## 🔗 Architecture & Pipeline Links
+- Networking Engine: [[03 - Resources/Packet Networking Library|Packet Networking Library]]
+- Spatial Trigger Volumes: [[03 - Resources/ZonePlus Spatial Engine|ZonePlus Spatial Engine]]
+- Data Persistence Standard: [[03 - Resources/PlayerData & ProfileStore Architecture|PlayerData & ProfileStore Architecture]]
+- Funnel Tracking: [[01 - Projects/Steal A Crate/Analytics & Onboarding Funnel|Steal A Crate Analytics & Funnel]]
+- Open Cloud Assets: [[03 - Resources/Roblox Open Cloud Asset Pipeline|Roblox Open Cloud Asset Pipeline]]
+- UI Design System: [[02 - Areas/Check-UI Design System|Check-UI Design System]]

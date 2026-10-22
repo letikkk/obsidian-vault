@@ -14,7 +14,7 @@ status: active
 
 # 💻 Resource: Luau Production Cheatsheet
 
-> **Verified, production-grade Luau code templates adhering to strict typing (`--!strict`), zero comments, zero prints, and Trove lifecycle management.**
+> **Verified, production-grade Luau code templates adhering to strict typing (`--!strict`), Trove lifecycle management, and section-only comments (`--[SECTION]--`).**
 
 ---
 
@@ -22,16 +22,20 @@ status: active
 
 ```luau
 --!strict
+--[SERVICES]--
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+--[MODULES]--
 local Trove = require(ReplicatedStorage.Shared.Modules.Trove)
 
+--[VARIABLES]--
 local PlayerService = {}
 PlayerService.__index = PlayerService
 
 local _trove = Trove.new()
 
+--[FUNCTIONS]--
 local function onPlayerAdded(player: Player)
     local playerTrove = _trove:Extend()
     playerTrove:Add(player.CharacterAdded:Connect(function(character)
@@ -43,6 +47,7 @@ local function onPlayerRemoving(player: Player)
     
 end
 
+--[INITIALIZATION]--
 function PlayerService.Init()
     for _, player in Players:GetPlayers() do
         task.spawn(onPlayerAdded, player)
@@ -64,9 +69,13 @@ return PlayerService
 
 ```luau
 --!strict
+--[SERVICES]--
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+--[MODULES]--
 local Trove = require(ReplicatedStorage.Shared.Modules.Trove)
 
+--[TYPES]--
 export type WeaponInstance = {
     Owner: Player,
     Model: Model,
@@ -77,6 +86,7 @@ export type WeaponInstance = {
     Destroy: (self: WeaponInstance) -> (),
 }
 
+--[CLASS]--
 local WeaponClass = {}
 WeaponClass.__index = WeaponClass
 
@@ -121,17 +131,23 @@ return WeaponClass
 
 ```luau
 --!strict
+--[SERVICES]--
 local CollectionService = game:GetService("CollectionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+--[MODULES]--
 local Trove = require(ReplicatedStorage.Shared.Modules.Trove)
 
+--[CONSTANTS]--
 local TAG_NAME = "InteractiveChest"
 
+--[COMPONENT]--
 local ChestComponent = {}
 ChestComponent.__index = ChestComponent
 
 local _instances: { [Instance]: any } = {}
 
+--[FUNCTIONS]--
 local function onInstanceAdded(instance: Instance)
     if not instance:IsA("Model") then
         return
@@ -156,6 +172,7 @@ local function onInstanceRemoved(instance: Instance)
     end
 end
 
+--[INITIALIZATION]--
 function ChestComponent.Init()
     for _, instance in CollectionService:GetTagged(TAG_NAME) do
         task.spawn(onInstanceAdded, instance)
@@ -173,11 +190,13 @@ return ChestComponent
 
 ```luau
 --!strict
+--[TYPES]--
 export type RateLimiter = {
     Check: (self: RateLimiter, player: Player) -> boolean,
     Cleanup: (self: RateLimiter, player: Player) -> (),
 }
 
+--[CLASS]--
 local RateLimiterClass = {}
 RateLimiterClass.__index = RateLimiterClass
 
@@ -219,6 +238,9 @@ return RateLimiterClass
 ---
 
 ## 🔗 Related Vault Links
+- DataStore Persistence: [[03 - Resources/PlayerData & ProfileStore Architecture|PlayerData & ProfileStore Architecture]]
+- Binary Networking: [[03 - Resources/Packet Networking Library|Packet Networking Library]]
+- Spatial Zones: [[03 - Resources/ZonePlus Spatial Engine|ZonePlus Spatial Engine]]
 - Architecture Area: [[02 - Areas/Roblox Luau Engineering|Roblox Luau Engineering]]
 - Active System: [[01 - Projects/Steal A Crate/System Architecture|Steal A Crate System Architecture]]
 - Plot Sandbox: [[01 - Projects/PlotTest/Plot System Architecture|Plot System Architecture]]

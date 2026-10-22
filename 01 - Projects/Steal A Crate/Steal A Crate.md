@@ -30,6 +30,7 @@ tags:
 | :--- | :--- | :--- |
 | 🏗️ **Architecture** | [[01 - Projects/Steal A Crate/System Architecture\|System Architecture]] | Client/Server Luau structure, controllers, services, Knit/MVC data flow. |
 | 🎮 **Game Design** | [[01 - Projects/Steal A Crate/Game Design Document\|Game Design Document]] | Core loop, crate weight & physics, zone progression, economy & combat. |
+| 📊 **Analytics & Funnel** | [[01 - Projects/Steal A Crate/Analytics & Onboarding Funnel\|Analytics & Funnel]] | Step-by-step onboarding funnels (Tutorial: Purchase, Collect, Sell). |
 | 📋 **Tasks & Progress** | [[01 - Projects/Steal A Crate/Tasks & Roadmap\|Tasks & Roadmap]] | Active sprint checklist, backlog, and completed features (Dataview/Tasks). |
 | 📡 **Technical Specs** | [[01 - Projects/Steal A Crate/Technical Reference\|Technical Reference]] | RemoteEvents dictionary, sound asset registry, Check-UI standards. |
 
