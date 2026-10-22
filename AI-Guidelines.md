@@ -36,3 +36,22 @@ If you are an AI assistant or autonomous agent working in this vault, follow the
 ### 4. Non-Destructive Edits
 - When updating existing notes, preserve user notes, thoughts, and structure.
 - When generating complex multi-step reasoning, use the format in `Templates/AI Agent Scratchpad Template.md`.
+
+### 5. Strict Luau Code Commenting Standard
+- **Only section header comments are permitted in Luau code:**
+  Format: `--[SECTION_NAME]--` (e.g. `--[SERVICES]--`, `--[MODULES]--`, `--[VARIABLES]--`, `--[FUNCTIONS]--`, `--[INITIALIZATION]--`).
+- **Zero inline chatter:** No docstrings, explanatory inline comments, or debug prints (`print`, `warn`) in production snippets. Keep the code clean and strictly organized by sections so the developer immediately knows where they are in the file.
+
+### 6. Analytics & Onboarding Funnels
+- Every key game milestone or player loop must declare a dedicated **`Funnel`** section.
+- Inside the section, enumerate all sequential steps explicitly (e.g., `Tutorial` with steps `Purchase`, `Collect`, `Sell`).
+- Link to [[03 - Resources/Analytics & Onboarding Funnel Architecture|Analytics & Onboarding Funnel Architecture]].
+
+### 7. Core Production Libraries
+- **Networking:** Always default to [[03 - Resources/Packet Networking Library|Packet]] (binary buffer serialization, type safety).
+- **Spatial Zones:** Always default to [[03 - Resources/ZonePlus Spatial Engine|ZonePlus v3.2.0]] (dynamic zones, zero idle physics drag).
+- **Data Persistence:** Always default to [[03 - Resources/PlayerData & ProfileStore Architecture|ProfileStore]] (session-locked profile store).
+
+### 8. Roblox Open Cloud Integration
+- Local API key location: `C:\Users\meepo\Documents\antigravity\Steal-A-Crate\roblox_cloud_key.txt`.
+- Use this key for programmatic uploading of audio, images, and 3D models via [[03 - Resources/Roblox Open Cloud Asset Pipeline|Roblox Open Cloud Asset Pipeline]].
