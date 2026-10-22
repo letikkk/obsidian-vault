@@ -51,13 +51,13 @@ status: active
 
 Every menu uses an unmistakable color identity, while preserving identical 60px header height, white top highlight, fading damier, and 2-tier bottom shadow divider:
 
-| Menu Archetype | Gradient Top | Gradient Bottom | Top Highlight | Damier Color | Dark Divider |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Shop** | `#FF1496` | `#E10019` | `#FFC8E1` | `#960014` | `#7D0012` |
-| **Codes** | `#00CDFF` | `#0082F5` | `#B4F0FF` | `#004B96` | `#00326E` |
-| **Settings** | `#FFFFFF` | `#D7DEE8` | `#FFFFFF` | `#6E7887` | `#5A6470` |
-| **Rebirth** | `#A000FF` | `#6000C8` | `#E0A0FF` | `#600090` | `#500078` |
-| **Daily Rewards** | `#98FF00` | `#50D000` | `#E0FFB0` | `#358000` | `#256000` |
+| Menu Archetype    | Gradient Top | Gradient Bottom | Top Highlight | Damier Color | Dark Divider |
+| :---------------- | :----------- | :-------------- | :------------ | :----------- | :----------- |
+| **Shop**          | `#FF1496`    | `#E10019`       | `#FFC8E1`     | `#960014`    | `#7D0012`    |
+| **Codes**         | `#00CDFF`    | `#0082F5`       | `#B4F0FF`     | `#004B96`    | `#00326E`    |
+| **Settings**      | `#FFFFFF`    | `#D7DEE8`       | `#FFFFFF`     | `#6E7887`    | `#5A6470`    |
+| **Rebirth**       | `#A000FF`    | `#6000C8`       | `#E0A0FF`     | `#600090`    | `#500078`    |
+| **Daily Rewards** | `#98FF00`    | `#50D000`       | `#E0FFB0`     | `#358000`    | `#256000`    |
 
 ---
 
