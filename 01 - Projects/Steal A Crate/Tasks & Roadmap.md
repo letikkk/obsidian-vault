@@ -21,14 +21,16 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 
 ## 🚀 Active Sprint & In Progress
 
-- [ ] Add sound effect when Bat successfully connects with another player #high
-- [ ] Implement visual trap placement indicator (hologram wireframe preview before drop) #medium
-- [ ] Add crate opening particle burst effect when opening at the base hatch #medium
 - [ ] Connect Obsidian vault notes with repository git workflow #low
 
 ---
 
 ## ✅ Completed Milestones
+
+### Combat & Ragdoll Engine
+- [x] Add sound effect when Bat successfully connects with another player #high
+- [x] Implement visual trap placement indicator (hologram wireframe preview before drop) #medium
+- [x] Add crate opening particle burst effect when opening at the base hatch #medium
 
 ### Core Mechanics & Physics
 - [x] Implement randomized crate scale (0.7x to 2.2x) and mass tiering #high
@@ -54,6 +56,8 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Create Zone Entering UI banner (`Forest 🙂`, `Beach 🏖️`, `Snow ❄️`, `Safe Zone 🛡️`) #high
 - [x] Refactor zone banner to permanent `StarterGui.Main.ZoneBanner` Frame #high
 - [x] Fix half-transparent text issue: isolate UIGradient to Background Frame for 100% solid text #high
+- [x] Connect Check-UI HUD menus: ShopUI, PetIndexUI, GrowingCratesUI, and EquippedPetsUI #high
+- [x] Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high
 
 ---
 

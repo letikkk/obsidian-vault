@@ -18,13 +18,16 @@ tags:
 
 ## 🚧 In Progress
 
-- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Add connection sound effect when Bat strikes enemy player #high
-- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Visual hologram trap placement indicator before dropping #medium
 - [ ] [[01 - Projects/PlotTest/PlotTest|PlotTest]]: Port verified plot instancing logic into Steal A Crate PlotManager #high
 - [ ] [[02 - Areas/World Building & Level Design|World Building]]: Audit zone boundary collision meshes to prevent player flinging out of map #medium
 
 ## ✅ Done
 
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Add connection sound effect when Bat strikes enemy player #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Visual hologram trap placement indicator before dropping #medium
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Crate opening particle burst effect when opening at base hatch #medium
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Connect Check-UI HUD menus (ShopUI, PetIndexUI, GrowingCratesUI, EquippedPetsUI) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high
 - [x] Initialized dedicated Roblox Obsidian Studio Vault with PARA architecture
 - [x] Configured Check-UI permanent `ZoneBanner` with 100% solid GothamBlack typography
 - [x] Built non-lethal constraint ragdoll & 150-stud bat fling combat engine
