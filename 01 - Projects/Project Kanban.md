@@ -27,6 +27,7 @@ tags:
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Visual hologram trap placement indicator before dropping #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Crate opening particle burst effect when opening at base hatch #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Connect Check-UI HUD menus (ShopUI, PetIndexUI, GrowingCratesUI, EquippedPetsUI) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Fixed Crates & Pets drawer opening bug (resolved require-cycle lock & bound cross-platform Activated events) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high
 - [x] Initialized dedicated Roblox Obsidian Studio Vault with PARA architecture
 - [x] Configured Check-UI permanent `ZoneBanner` with 100% solid GothamBlack typography
