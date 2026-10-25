@@ -69,6 +69,7 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Fix pet card text bleeding across columns in PetIndexUI across all 4 biomes with ClipsDescendants and text wrapping #high ✅ 2026-10-25
 - [x] Integrate dynamic getDeviceScale() engine (0.58 to 1.12) bound to ViewportSize for modal dialogs (PetIndexUI, ShopUI, SellUI, TrailShopUI) #high ✅ 2026-10-25
 - [x] Implement 3D ViewportFrame previews across PetIndexUI (all 32 biome cards + PetDetails with undiscovered silhouette), GrowingCratesUI (ready & growing crates), and EquippedPetsUI (equipped pets with dynamic mutation VFX rendering) #high ✅ 2026-10-25
+- [x] Correct ViewportFrame model centering (bounding box delta offset) & integrate continuous 360° turntable spinning animation across PetIndexUI, GrowingCratesUI, and EquippedPetsUI #high ✅ 2026-10-25
 
 ---
 
