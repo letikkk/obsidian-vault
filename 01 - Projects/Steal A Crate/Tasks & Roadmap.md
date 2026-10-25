@@ -57,7 +57,7 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Refactor zone banner to permanent `StarterGui.Main.ZoneBanner` Frame #high
 - [x] Fix half-transparent text issue: isolate UIGradient to Background Frame for 100% solid text #high
 - [x] Connect Check-UI HUD menus: ShopUI, PetIndexUI, GrowingCratesUI, and EquippedPetsUI #high
-- [x] Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high
+- [x] Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high ✅ 2026-10-25
 
 ---
 
