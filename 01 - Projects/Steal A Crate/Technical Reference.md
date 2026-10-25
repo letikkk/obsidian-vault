@@ -122,6 +122,43 @@ Configured in `ReplicatedStorage.Data.CratesData` and `ReplicatedStorage.Data.Ch
 
 ---
 
+## 🎭 3D Art, Rigging & Animation Kinematics Specification
+
+### 1. Multi-Part MeshPart & MaterialVariant Architecture
+Roblox `MeshPart`s only support a single `Color` and `MaterialVariant`. All models are split into distinct volumetric child meshes parented to the model:
+- **`Studs` (`Plastic`):** Organic bodies, creature fur, chitin carapaces, foliage, and wooden slats.
+- **`Weld` (`Plastic`):** Metal corner brackets, iron bands, rusty plates, and industrial gym hardware.
+- **`Universal` (`Plastic`):** Polished synthetic materials, pedestals, and smooth crystal/ice housings.
+- **`Glue` (`Plastic`):** Ancient stone/gold inlays, hieroglyphic plates, and sacred desert relics.
+- **`Neon` (`Enum.Material.Neon`):** Emissive crystal shards, magic runes, glowing venom cores, and eyes.
+
+### 2. Volumetric 3D Eye Anatomy
+- All creature facial features utilize **100% 3D beveled mesh geometry** (zero 2D Decals or ImageLabels):
+  - **Sclera:** Beveled white mesh pill (`White` MeshPart, BrickColor `Institutional white`).
+  - **Pupil & Iris:** High-contrast beveled disc (`Eyes` / `Black` / `Pupil.L/R` MeshPart, BrickColor `Really black`).
+  - **Specular Catchlight:** Forward-offset white highlight disc giving alive luster.
+  - **Articulated Eyebrows:** Dedicated bones (`Eyebrow.L/R`) allowing expressive emotive blinking, squinting, and fierce reactions.
+
+### 3. Skinned Armature Rigging & RootPart Motor6D Dual Pipeline
+- **Armature Hierarchy:** Parented directly under `RootPart`, providing complete skeletal deforming rigs (e.g. `ScarfBear` 9 bones, `SandCentipede` 25 bones, `Octopus` 27 bones, `Glaceclaw` 29 bones, `KingCrab` 47 bones).
+- **Motor6D Replication:** Each color-separated MeshPart is simultaneously bound to `RootPart` with a `Motor6D` (`Part0 = RootPart`, `Part1 = MeshPart`), guaranteeing physical replication and collision bounds in Roblox Studio.
+- **IK Constraints:** Multi-legged creatures feature dedicated inverse kinematics targets (`Foot.IK.L/R`, `FrontLeg-IK.L/R`, `BackLeg-IK.L/R`) locking ground contact and eliminating foot sliding.
+- **Sinusoidal Articulated Chains:** Multi-segment arthropods (`SandCentipede`) feature 8 articulated body/tail joints (`Body.001` -> `Tail` -> `Tail.001` -> `Tail.002` -> `Tail.003` -> `TailEnd`), producing fluid natural locomotion waves.
+
+### 4. Animation Cadence & Kinematics
+- **Cadence Standard:** 24 FPS baseline with smooth cubic interpolation.
+- **Idle Cycles:** 48 keyframes (1.96s - 2.46s). Gentle vertical breathing oscillation on `Root`/`Body` (Y translation ~0.12 studs), ear/tail twitching, and secondary organic ripples (`Priority = Enum.AnimationPriority.Action`).
+- **Walk / Run Cycles:** 21 - 24 keyframes (0.83s - 0.96s). Snappy, energetic step cycles with rhythmic leg swings, body tilt, and IK ground planting (`Priority = Enum.AnimationPriority.Action`).
+- **Combat & Boss Actions:** 24 - 72 keyframes. Fast anticipation, explosive snap swing, ground pound shockwaves, and settling recoveries.
+
+### 5. Crate Bottom-Aligned Pivot Specification
+- Standard baseline: 2.16 x 2.16 x 2.16 studs cubic footprint.
+- All 16 crate models have `PrimaryPart.PivotOffset = PrimaryPart.CFrame:ToObjectSpace(bottomCFrame)`, ensuring `diffFromBottom = 0.000` studs.
+- All internal parts are rigidly connected to `PrimaryPart` via `WeldConstraint`s.
+- `SetupCratesService`, `BaseService`, and `PlacementController` dynamically enforce `bottomRelPivot = math.max(0, pivot.Position.Y - (cf.Position.Y - (sz.Y / 2)))`, guaranteeing zero terrain penetration across all scales (`Regular 1.0x`, `Huge 1.8x`, `Colossal 3.5x`).
+
+---
+
 ## 🎨 UI Hierarchy Specification (`StarterGui.Main`)
 
 ```
