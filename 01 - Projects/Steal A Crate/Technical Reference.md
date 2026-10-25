@@ -46,7 +46,9 @@ All game audio resides in `game.ReplicatedStorage.Assets.Sounds`.
 | **NotificationPop** | `rbxassetid://105983221709653` | 0.55 | Default notification pop-in cue |
 | **SuccessSound** | `rbxassetid://86810634715248` | 0.50 | Success & Robux gradient popups |
 | **ErrorSound** | `rbxassetid://87519554692663` | 0.60 | Error / action rejected notification |
-| **ButtonClick** | `rbxassetid://15675059323` | 0.50 | Generic UI button interactions |
+| **ButtonClick** | `rbxassetid://15675059323` | 0.50 | Generic UI button interactions (single .Activated trigger) |
+| **MutationMagic** | `rbxassetid://132185731364109` | 0.50 | Magical chime when mutated crate opens (replaces electric MutationSound) |
+| *MutationSound* | *(Purged)* | - | Deprecated and purged from audio assets |
 
 ---
 
@@ -64,12 +66,20 @@ StarterGui.Main (ScreenGui: ResetOnSpawn = false, IgnoreGuiInset = true)
 ├── Messages (Frame: Notification stack container)
 │   ├── UIListLayout (Vertical, Bottom, Center, Padding = 0.03)
 │   └── UIAspectRatioConstraint (AspectRatio = 2.95)
-└── ZoneBanner (Frame: Zone entering popup)
-    ├── Background (Frame: Dark slate #0F141A, BackgroundTransparency = 0.5)
-    │   └── FadeGradient (UIGradient: horizontal fade [0 -> 1, 0.18 -> 0.45, 0.82 -> 0.45, 1 -> 1])
-    ├── BannerScale (UIScale: responsive viewport engine [0.52, 1.18])
-    └── ZoneLabel (TextLabel: GothamBlack 38pt, 100% solid opacity, TextTransparency = 0)
-        └── TextStroke (UIStroke: 3.2px, Color = #000000, Transparency = 0)
+├── ZoneBanner (Frame: Zone entering popup)
+│   ├── Background (Frame: Dark slate #0F141A, BackgroundTransparency = 0.5)
+│   │   └── FadeGradient (UIGradient: horizontal fade [0 -> 1, 0.18 -> 0.45, 0.82 -> 0.45, 1 -> 1])
+│   ├── BannerScale (UIScale: responsive viewport engine [0.52, 1.18])
+│   └── ZoneLabel (TextLabel: GothamBlack 38pt, 100% solid opacity, TextTransparency = 0)
+│       └── TextStroke (UIStroke: 3.2px, Color = #000000, Transparency = 0)
+├── LefttSideButtons (Frame: Shop & Pet Index buttons with AnchorPoint 0.5, 0.5 bounce)
+├── RightSideButtons (Frame: Crates & Pets drawer toggle buttons)
+├── EquippedPetsUI (Frame: Right-side placed pets drawer with non-overlapping header & row bounds)
+├── GrowingCratesUI (Frame: Right-side growing crates drawer with non-overlapping header)
+├── PetIndexUI (Frame: 4-Biome completion modal with dynamic getDeviceScale and card anti-bleed)
+├── ShopUI (Frame: Simulator shop modal with dynamic getDeviceScale)
+├── SellUI (Frame: Merchant sell modal with dynamic getDeviceScale)
+└── TrailShopUI (Frame: Merchant trails shop modal with dynamic getDeviceScale)
 ```
 
 ---

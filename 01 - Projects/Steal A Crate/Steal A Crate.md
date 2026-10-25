@@ -93,6 +93,19 @@ flowchart LR
    - Ported notification stack from *Collect a Snack* with sound effects (`NotificationPop`, `SuccessSound`, `ErrorSound`).
    - 5 gradient presets: `Normal`, `Success`, `Robux`, `Rolled`, `Error`.
 
+7. **Cross-Device UI Responsiveness & Check-UI Menus**:
+   - Dynamic `getDeviceScale()` engine (`0.58` to `1.12`) bound to `Camera.ViewportSize` for modal windows (`PetIndexUI`, `ShopUI`, `SellUI`, `TrailShopUI`).
+   - Universal `TextScaled = true` with `UITextSizeConstraint` ranges and text wrapping across all HUD and modal elements, preventing text overflow and collisions.
+   - Non-overlapping layout geometry in `EquippedPetsUI` (`EquippedCount` vs `ExtraSlotButton`, `PetName` vs `UnequipButton`) and `GrowingCratesUI` (`Title` vs `GrowAllButton`).
+   - Multi-column card anti-bleeding engine in `PetIndexUI` with container `ClipsDescendants = true` across all biomes.
+   - Single-activation cross-platform `.Activated` bindings with debouncing to prevent double-click events and duplicate audio playback.
+   - AnchorPoint `(0.5, 0.5)` centered bounce animations via `ButtonAnimationController`.
+
+8. **Spatial Base Management & Kinesthetics**:
+   - Spatial grid animal distribution on expanded base pens (`PenLevel > 1`) and dynamic wander boundaries.
+   - Dynamic FOV camera expansion when carrying heavy crates and running on treadmills.
+   - Purged join-time electric `MutationSound` audio artifacts across client and server.
+
 ---
 
 ## 👥 Related Vault Links

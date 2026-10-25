@@ -58,6 +58,16 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Fix half-transparent text issue: isolate UIGradient to Background Frame for 100% solid text #high
 - [x] Connect Check-UI HUD menus: ShopUI, PetIndexUI, GrowingCratesUI, and EquippedPetsUI #high
 - [x] Implement AnalyticsService onboarding funnels (Tutorial, FirstHeist, CoreProgression) #high ✅ 2026-10-25
+- [x] Implement dynamic FOV camera expansion when carrying heavy crates and running on treadmills #medium ✅ 2026-10-25
+- [x] Align HUD button pivots to AnchorPoint (0.5, 0.5) with tactile UIScale hover/press bounce animations #medium ✅ 2026-10-25
+- [x] Fix double-click sound and dual event triggers on UI elements (purged legacy MouseButton1Click, centralized to Activated with debouncing) #high ✅ 2026-10-25
+- [x] Purge MutationSound electrical zap audio asset and all playback references across ReplicatedStorage, MutationModule, MutationController, and HatchController #medium ✅ 2026-10-25
+- [x] Implement spatial grid pet scattering and dynamic wander boundaries on expanded plots (PenLevel > 1) in BaseService #medium ✅ 2026-10-25
+- [x] Cross-device responsive UI scaling & anti-overflow: convert fixed font sizes to TextScaled + UITextSizeConstraint across EquippedPetsUI, GrowingCratesUI, PetIndexUI, ShopUI, and SellUI #high ✅ 2026-10-25
+- [x] Fix header and pet row text collisions in EquippedPetsUI (EquippedCount vs ExtraSlotButton, PetName vs UnequipButton) #high ✅ 2026-10-25
+- [x] Fix header text collision in GrowingCratesUI (Title vs GrowAllButton) #high ✅ 2026-10-25
+- [x] Fix pet card text bleeding across columns in PetIndexUI across all 4 biomes with ClipsDescendants and text wrapping #high ✅ 2026-10-25
+- [x] Integrate dynamic getDeviceScale() engine (0.58 to 1.12) bound to ViewportSize for modal dialogs (PetIndexUI, ShopUI, SellUI, TrailShopUI) #high ✅ 2026-10-25
 
 ---
 

@@ -23,6 +23,11 @@ tags:
 
 ## ✅ Done
 
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Cross-device responsive UI scaling & text anti-overflow engine (EquippedPetsUI, GrowingCratesUI, PetIndexUI, ShopUI, SellUI) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Fixed dual click sound & event duplicate firing on HUD and modal buttons (centralized to modern .Activated with debouncing) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Purged MutationSound electric audio asset & playback from ReplicatedStorage and controllers #medium
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Spatial grid pet scattering on expanded base plots & widened wander perimeter math #medium
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Dynamic FOV camera shift for crate carrying and treadmill sprinting #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Add connection sound effect when Bat strikes enemy player #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Visual hologram trap placement indicator before dropping #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Crate opening particle burst effect when opening at base hatch #medium
