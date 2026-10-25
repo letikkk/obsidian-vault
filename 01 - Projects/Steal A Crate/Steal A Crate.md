@@ -106,6 +106,11 @@ flowchart LR
    - Dynamic FOV camera expansion when carrying heavy crates and running on treadmills.
    - Purged join-time electric `MutationSound` audio artifacts across client and server.
 
+9. **3D ViewportFrame UI Rendering**:
+   - `PetIndexUI`: Dynamic 3D model rendering for all 32 biome pet cards and `PetDetails`. Discovered pets showcase vivid full-color models at isometric angles (`-14°` pitch, `35°` yaw), while undiscovered pets display mystery dark silhouettes with smooth plastic and hidden decals.
+   - `GrowingCratesUI`: Real-time 3D crate previews inside `CrateViewport` for both ready crates (`CrateReadyRow`) and growing crates (`CrateGrowingRow`), displaying the exact crate tier model.
+   - `EquippedPetsUI`: Real-time 3D pet models inside `PetViewport` for all equipped pets, integrated with `MutationModule` to dynamically render mutation materials, neons, and tints.
+
 ---
 
 ## 👥 Related Vault Links
