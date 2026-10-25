@@ -71,6 +71,12 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Implement 3D ViewportFrame previews across PetIndexUI (all 32 biome cards + PetDetails with undiscovered silhouette), GrowingCratesUI (ready & growing crates), and EquippedPetsUI (equipped pets with dynamic mutation VFX rendering) #high ✅ 2026-10-25
 - [x] Correct ViewportFrame model centering (bounding box delta offset) & integrate continuous 360° turntable spinning animation across PetIndexUI, GrowingCratesUI, and EquippedPetsUI #high ✅ 2026-10-25
 
+### World, Progression & Asset Pipeline
+- [x] Configure and integrate Treadmill Level 5 (`TreadmillLVL5`: 40 Speed gain, $35,000 upgrade cost, Level 5 cap, synced with UpgradeSign and PlotTemplate) #high ✅ 2026-10-25
+- [x] Import new Desert entities `SandCentipede` (Mythic) and `SunkenPharaoh` (Secret) into `ReplicatedStorage.Assets.Entities` and register stats in `CharactersData` #high ✅ 2026-10-25
+- [x] Import 8 new biome crate models (`FrostWoodCrate`, `IceboundCrate`, `AuroraRelicCrate`, `DuneCrate`, `MirageCrate`, `SunkenSandsCrate`, `PharaohCrate`, `PrecursorCrate`) into `ReplicatedStorage.Assets.Crates` and map in `CratesData` #high ✅ 2026-10-25
+- [x] Publish 23 entity animations via Roblox Open Cloud to Domofon Games (`858153940`) and link in `ReplicatedStorage.Assets.Animations` (SandCentipede, SunkenPharaoh, FernFox, ScarabHopper, DustImp, BoneVulture, CinderJackal, EclipseHorror, FallenProtocol, Moth, Mammoth, Glaceclaw) #high ✅ 2026-10-25
+
 ---
 
 ## 🔮 Backlog & Future Milestones

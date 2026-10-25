@@ -23,6 +23,11 @@ tags:
 
 ## ✅ Done
 
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Published 23 entity animations to Domofon Games (858153940) via Roblox Open Cloud Assets API and linked in ReplicatedStorage.Assets.Animations #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Imported 8 Biome Crates (Snow & Desert) into ReplicatedStorage.Assets.Crates & mapped in CratesData #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Imported Desert entities SandCentipede (Mythic) & SunkenPharaoh (Secret) into ReplicatedStorage.Assets.Entities and CharactersData #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Integrated Treadmill LVL 5 (gain 40, $35k upgrade, Level 5 cap, synced with UpgradeSign and PlotTemplate) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: 3D ViewportFrame model centering & 360° turntable spin loop engine (PetIndexUI, GrowingCratesUI, EquippedPetsUI) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Cross-device responsive UI scaling & text anti-overflow engine (EquippedPetsUI, GrowingCratesUI, PetIndexUI, ShopUI, SellUI) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Fixed dual click sound & event duplicate firing on HUD and modal buttons (centralized to modern .Activated with debouncing) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Purged MutationSound electric audio asset & playback from ReplicatedStorage and controllers #medium

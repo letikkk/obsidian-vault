@@ -111,6 +111,16 @@ flowchart LR
    - `GrowingCratesUI`: Real-time 3D crate previews inside `CrateViewport` with smooth turntable spin for both ready crates (`CrateReadyRow`) and growing crates (`CrateGrowingRow`), displaying the exact crate tier model.
    - `EquippedPetsUI`: Real-time 3D pet models inside `PetViewport` with smooth turntable spin for all equipped pets, integrated with `MutationModule` to dynamically render mutation materials, neons, and tints.
 
+10. **Treadmill Tier 5 Progression Engine**:
+    - Integrated `TreadmillLVL5` providing +40 Speed per tick (upgrade cost $35,000, max level 5). Fully synchronized with `TreadmillService`, `UpgradeSign`, and dynamically allocated `PlotTemplate` instances.
+
+11. **Expanded Desert Entities & Biome Crates**:
+    - Imported and registered `SandCentipede` (Mythic) and `SunkenPharaoh` (Secret) into `ReplicatedStorage.Assets.Entities` and `CharactersData`.
+    - Integrated 8 imported biome crates across Snow (`FrostWoodCrate`, `IceboundCrate`, `AuroraRelicCrate`) and Desert (`DuneCrate`, `MirageCrate`, `SunkenSandsCrate`, `PharaohCrate`, `PrecursorCrate`) into `ReplicatedStorage.Assets.Crates` and mapped in `CratesData`.
+
+12. **Roblox Open Cloud Animation Pipeline**:
+    - Streamed and published 23 custom animations to the Domofon Games group (`858153940`) via the Assets API, automatically linking newly generated `rbxassetid`s directly into `ReplicatedStorage.Assets.Animations`.
+
 ---
 
 ## 👥 Related Vault Links
