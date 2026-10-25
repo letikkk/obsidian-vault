@@ -23,6 +23,7 @@ tags:
 
 ## ✅ Done
 
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Fixed crate grounding & terrain sinking (PrimaryParts, bottom PivotOffsets, WeldConstraints, dynamic bottomRelPivot math in SetupCratesService, BaseService, PlacementController) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Published 23 entity animations to Domofon Games (858153940) via Roblox Open Cloud Assets API and linked in ReplicatedStorage.Assets.Animations #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Imported 8 Biome Crates (Snow & Desert) into ReplicatedStorage.Assets.Crates & mapped in CratesData #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Imported Desert entities SandCentipede (Mythic) & SunkenPharaoh (Secret) into ReplicatedStorage.Assets.Entities and CharactersData #high

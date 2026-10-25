@@ -75,6 +75,7 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] Configure and integrate Treadmill Level 5 (`TreadmillLVL5`: 40 Speed gain, $35,000 upgrade cost, Level 5 cap, synced with UpgradeSign and PlotTemplate) #high ✅ 2026-10-25
 - [x] Import new Desert entities `SandCentipede` (Mythic) and `SunkenPharaoh` (Secret) into `ReplicatedStorage.Assets.Entities` and register stats in `CharactersData` #high ✅ 2026-10-25
 - [x] Import 8 new biome crate models (`FrostWoodCrate`, `IceboundCrate`, `AuroraRelicCrate`, `DuneCrate`, `MirageCrate`, `SunkenSandsCrate`, `PharaohCrate`, `PrecursorCrate`) into `ReplicatedStorage.Assets.Crates` and map in `CratesData` #high ✅ 2026-10-25
+- [x] Fix crate grounding & physics collision: configure PrimaryParts, bottom-aligned PivotOffset, rigid WeldConstraints, and dynamic bounding-box bottom compensation in SetupCratesService, BaseService, and PlacementController to eliminate terrain sinking #high ✅ 2026-10-25
 - [x] Publish 23 entity animations via Roblox Open Cloud to Domofon Games (`858153940`) and link in `ReplicatedStorage.Assets.Animations` (SandCentipede, SunkenPharaoh, FernFox, ScarabHopper, DustImp, BoneVulture, CinderJackal, EclipseHorror, FallenProtocol, Moth, Mammoth, Glaceclaw) #high ✅ 2026-10-25
 
 ---
