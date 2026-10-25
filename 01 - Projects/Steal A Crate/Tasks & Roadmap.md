@@ -30,6 +30,8 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
   - Fast 3s opening countdown on tutorial crate & guaranteed starter Scarf Bear reward.
   - $250 completion bonus & persistent profile store flag (`isTutorialCompleted = true`).
   - Funnel analytics tracking: `Tutorial: Start -> StealCrate -> PlaceCrate -> OpenCrate -> PlacePet`.
+  - Fixed banner permanence for existing players via progression auto-detection (`isExistingPlayer`).
+  - Implemented luminous guidance Beam ray with flowing chevrons, 3D waypoint beacon (`▼`), and `GetTutorialState` RemoteFunction client sync.
 - [ ] **[TASK-02] Offline Earnings / Idle AFK Income System** #high
   - Store `LastLogoutTimestamp: number` in `ProfileStore` data.
   - Calculate `deltaTime = math.min(CurrentTime - LastLogoutTimestamp, MAX_OFFLINE_SECONDS)`.
