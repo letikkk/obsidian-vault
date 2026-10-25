@@ -9,6 +9,11 @@ tags:
 
 ## 📥 Backlog
 
+- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-02]** Offline Earnings / Idle AFK Income System (timestamp delta, cap, claim modal) #high
+- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-03]** Interactive "Mountain of Money" World Prop (central cash vault, token-bucket rate limiter) #medium
+- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-04]** Community Engagement Perks: Group Join & Favorite Rewards (server GroupService check, triad state) #medium
+- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-05]** Economy & Progression Balance Pass (early game pacing, upgrade curves, spawn intervals) #high
+- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-06]** General Bug Fixes, Network Optimization & QoL Polish (console audit, safe-zone boundaries) #medium
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Build Plot upgrade shop (expanded holding pens, faster conveyor belts) #high
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Implement Rebirth progression system with speed gain multipliers #high
 - [ ] [[02 - Areas/Check-UI Design System|Check-UI]]: Build 7-Day Daily Rewards Modal (3x2 grid + Rainbow Day 7 card) #medium
@@ -22,6 +27,8 @@ tags:
 - [ ] [[02 - Areas/World Building & Level Design|World Building]]: Audit zone boundary collision meshes to prevent player flinging out of map #medium
 
 ## ✅ Done
+
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-01]** First-Time User Experience (FTUE): Guaranteed Tutorial Crate & 5-Step Funnel (TutorialService, TutorialController, ground chevron arrows, cartoon pointer hand, fast 3s open, guaranteed Scarf Bear, $250 reward, AnalyticsService funnel) #high
 
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Fixed crate grounding & terrain sinking (PrimaryParts, bottom PivotOffsets, WeldConstraints, dynamic bottomRelPivot math in SetupCratesService, BaseService, PlacementController) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Published 23 entity animations to Domofon Games (858153940) via Roblox Open Cloud Assets API and linked in ReplicatedStorage.Assets.Animations #high

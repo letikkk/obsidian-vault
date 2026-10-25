@@ -21,6 +21,37 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 
 ## 🚀 Active Sprint & In Progress
 
+### Epic: Onboarding, Retention & Economy Expansion
+- [x] **[TASK-01] First-Time User Experience (FTUE): Guaranteed Tutorial Crate & Funnel** #high ✅ 2026-10-25
+  - Deterministic collision-safe tutorial crate spawn adjacent to player (`(36, 10, -78)`).
+  - Client theft protection lock (`TutorialOwner = player.UserId`).
+  - 5-step tutorial flow matching reference: "Steal a Crate!", "Go to your Pen!", "Place your Crate!", "Open the Crate", "Place your Pet!".
+  - Animated cartoon hand pointer cursor (`rbxassetid://131458905217618`) & dynamic red ground chevron trail (`rbxassetid://119897674193442`).
+  - Fast 3s opening countdown on tutorial crate & guaranteed starter Scarf Bear reward.
+  - $250 completion bonus & persistent profile store flag (`isTutorialCompleted = true`).
+  - Funnel analytics tracking: `Tutorial: Start -> StealCrate -> PlaceCrate -> OpenCrate -> PlacePet`.
+- [ ] **[TASK-02] Offline Earnings / Idle AFK Income System** #high
+  - Store `LastLogoutTimestamp: number` in `ProfileStore` data.
+  - Calculate `deltaTime = math.min(CurrentTime - LastLogoutTimestamp, MAX_OFFLINE_SECONDS)`.
+  - Formula: `Income = deltaTime * BaseRatePerSecond * Multiplier`.
+  - Network remote & "Welcome Back!" claim modal in Check-UI style.
+- [ ] **[TASK-03] Interactive "Mountain of Money" World Prop** #medium
+  - Model & stage interactive central cash vault/pile prop.
+  - Token-bucket rate limiter debounce on server.
+  - ZonePlus spatial trigger or bounded ProximityPrompt with particle bursts & tactile audio.
+- [ ] **[TASK-04] Community Engagement Perks: Group Join & Favorite Rewards** #medium
+  - Server validation via `Player:IsInGroup(GROUP_ID)`.
+  - Profile state tracking (`GroupRewardClaimed`, `FavoriteRewardClaimed`).
+  - Button State Triad: `Claim`, `Claimed`, `Locked / Join Group`.
+- [ ] **[TASK-05] Economy & Progression Balance Pass** #high
+  - Centralize economy numeric constants in `ReplicatedStorage.Data`.
+  - Smooth first 5 minutes progression curve (first upgrade under 90s).
+  - Scale crate spawn interval & payout curves against upgrade thresholds.
+- [ ] **[TASK-06] General Bug Fixes, Network Optimization & QoL Polish** #medium
+  - Audit console logs to maintain zero uncaught runtime errors.
+  - Cross-device safe-zone UI boundary testing on mobile devices.
+  - Physics anti-sink grounding verification across all crate tiers.
+
 - [ ] Connect Obsidian vault notes with repository git workflow #low
 
 ---
