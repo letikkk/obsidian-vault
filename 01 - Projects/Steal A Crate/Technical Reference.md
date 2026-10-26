@@ -108,17 +108,59 @@ Configured in `ServerScriptService.Main.Services.TreadmillService` and synced wi
 
 ---
 
-## 📦 Biome Crates & Extended Entities
+## 📦 Biome Crates & Canonical Entity Rosters
 
-Configured in `ReplicatedStorage.Data.CratesData` and `ReplicatedStorage.Data.CharactersData`.
+Configured strictly in `ReplicatedStorage.Data.CratesData` and `ReplicatedStorage.Data.CharactersData`.
 
-### Extended Biome Crates (`ReplicatedStorage.Assets.Crates`)
-- **Snow Biome:** `FrostWoodCrate`, `IceboundCrate`, `AuroraRelicCrate`
-- **Desert Biome:** `DuneCrate`, `MirageCrate`, `SunkenSandsCrate`, `PharaohCrate`, `PrecursorCrate`
+### 1. Crate Rarity Mapping by Biome
+| Biome | Crate №1 | Crate №2 | Crate №3 | Crate №4 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Forest** | Common (`WoodenCrate`) | Uncommon (`ReinforcedCrate`) | Rare (`OverGrownCrate`) | Epic (`RuneCrate`) |
+| **Beach** | Common (`DriftwoodCrate`) | Uncommon (`CoralCrate`) | Rare (`TidalCrate`) | Epic (`LeviathanCrate`) |
+| **Winter** | Common (`SnowDriftwoodCrate`) | Rare (`SnowCoralCrate`) | Epic (`SnowTidalCrate`) | Legendary (`SnowLeviathanCrate`) |
+| **Desert** | Rare (`DesertDriftwoodCrate`) | Epic (`DesertCoralCrate`) | Legendary (`DesertTidalCrate`) | Mythic (`DesertLeviathanCrate`) |
 
-### Extended Desert Entities (`ReplicatedStorage.Assets.Entities`)
-- **SandCentipede:** Mythic tier, BaseWeight `820`, HatchChance `0.04%`, Income `15,000`, SellPrice `650,000`, Multiplier `25.0`
-- **SunkenPharaoh:** Secret tier, BaseWeight `1150`, HatchChance `0.005%`, Income `40,000`, SellPrice `1,800,000`, Multiplier `50.0`
+### 2. Full 32-Creature Roster & Rarities
+
+#### Forest (Roster v4)
+1. **Scarf Bear:** Common | Income: $2/s | Hatch: 35% | Multiplier: 1.0x
+2. **Forest Owl:** Common | Income: $3/s | Hatch: 35% | Multiplier: 1.0x
+3. **Otter:** Uncommon | Income: $7/s | Hatch: 12% | Multiplier: 1.2x
+4. **Stump Creature:** Uncommon | Income: $8/s | Hatch: 12% | Multiplier: 1.2x
+5. **Mushroom Deer:** Rare | Income: $22/s | Hatch: 5% | Multiplier: 1.5x
+6. **Fern Fox:** Epic | Income: $55/s | Hatch: 0.6% | Multiplier: 2.0x
+7. **Mawler:** Epic | Income: $70/s | Hatch: 0.4% | Multiplier: 2.2x
+8. **Brr Brr Patapim:** Legendary | Income: $220/s | Hatch: 0.05% | Multiplier: 3.5x
+
+#### Beach (Roster v3)
+1. **Seagull:** Common | Income: $6/s | Hatch: 35% | Multiplier: 1.0x
+2. **Crab:** Common | Income: $8/s | Hatch: 35% | Multiplier: 1.0x
+3. **Sea Turtle:** Uncommon | Income: $22/s | Hatch: 22% | Multiplier: 1.2x
+4. **Seal:** Rare | Income: $60/s | Hatch: 6.5% | Multiplier: 1.5x
+5. **Octopus:** Epic | Income: $150/s | Hatch: 1.0% | Multiplier: 2.0x
+6. **Tralalero Tralala:** Epic | Income: $180/s | Hatch: 0.8% | Multiplier: 2.2x
+7. **Submarine Hermit:** Legendary | Income: $550/s | Hatch: 0.15% | Multiplier: 3.5x
+8. **Reef Reaper:** Secret | Income: $2,200/s | Hatch: 0.01% | Multiplier: 8.0x
+
+#### Winter (Snow)
+1. **Penguin:** Common | Income: $28/s | Hatch: 60% | Multiplier: 1.0x
+2. **Mammoth:** Uncommon | Income: $70/s | Hatch: 28% | Multiplier: 1.3x
+3. **Arctic Fox:** Rare | Income: $160/s | Hatch: 5.5% | Multiplier: 1.6x
+4. **Frost Moth:** Rare | Income: $190/s | Hatch: 4.5% | Multiplier: 1.7x
+5. **Cryocore:** Epic | Income: $450/s | Hatch: 1.0% | Multiplier: 2.4x
+6. **Icecrawler:** Epic | Income: $550/s | Hatch: 0.8% | Multiplier: 2.6x
+7. **Glaceclaw:** Legendary | Income: $1,400/s | Hatch: 0.19% | Multiplier: 4.0x
+8. **Frost Wyrm:** Mythic | Income: $4,200/s | Hatch: 0.01% | Multiplier: 7.5x
+
+#### Desert
+1. **Scarab Hopper:** Rare | Income: $380/s | Hatch: 35% | Multiplier: 1.8x
+2. **Dust Imp:** Rare | Income: $480/s | Hatch: 35% | Multiplier: 2.0x
+3. **Cinder Jackal:** Epic | Income: $1,200/s | Hatch: 12.5% | Multiplier: 3.2x
+4. **Bone Vulture:** Epic | Income: $1,500/s | Hatch: 12.5% | Multiplier: 3.5x
+5. **Sand Centipede:** Legendary | Income: $3,800/s | Hatch: 2.4% | Multiplier: 6.0x
+6. **Fallen Protocol:** Legendary | Income: $4,500/s | Hatch: 2.4% | Multiplier: 7.0x
+7. **Eclipse Horror:** Mythic | Income: $12,000/s | Hatch: 0.19% | Multiplier: 12.0x
+8. **Sunken Pharaoh:** Secret | Income: $40,000/s | Hatch: 0.01% | Multiplier: 30.0x
 
 ---
 
