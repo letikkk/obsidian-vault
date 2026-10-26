@@ -32,15 +32,21 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
   - Funnel analytics tracking: `Tutorial: Start -> StealCrate -> PlaceCrate -> OpenCrate -> PlacePet`.
   - Fixed banner permanence for existing players via progression auto-detection (`isExistingPlayer`).
   - Implemented luminous guidance Beam ray with flowing chevrons, 3D waypoint beacon (`▼`), and `GetTutorialState` RemoteFunction client sync.
-- [ ] **[TASK-02] Offline Earnings / Idle AFK Income System** #high
+- [x] **[TASK-02] Offline Earnings / Idle AFK Income System** #high ✅ 2026-10-26
   - Store `LastLogoutTimestamp: number` in `ProfileStore` data.
-  - Calculate `deltaTime = math.min(CurrentTime - LastLogoutTimestamp, MAX_OFFLINE_SECONDS)`.
-  - Formula: `Income = deltaTime * BaseRatePerSecond * Multiplier`.
-  - Network remote & "Welcome Back!" claim modal in Check-UI style.
-- [ ] **[TASK-03] Interactive "Mountain of Money" World Prop** #medium
-  - Model & stage interactive central cash vault/pile prop.
-  - Token-bucket rate limiter debounce on server.
-  - ZonePlus spatial trigger or bounded ProximityPrompt with particle bursts & tactile audio.
+  - Calculate `deltaTime = math.min(CurrentTime - LastLogoutTimestamp, MAX_OFFLINE_SECONDS)` (12-hour cap).
+  - Payout rate derived dynamically from placed collectibles & crates via `getPlayerIncomeRate` (minimum $5/s baseline).
+  - Atomic persistence in `PlayerData`, `Template`, and ProfileStore session saving.
+  - RemoteEvent `ClaimOfflineCash` & client event `OfflineCashClaimed` dispatching payout amount and pile coordinates.
+  - Client-side feedback: tactile `SuccessSound` chime, rising pop-up text (`+$18K`, GothamBlack, lime neon `#98FF00`, black UIStroke) with tween fadeout, sparkle particle burst, and Check-UI `MessageHandler` toast.
+- [x] **[TASK-03] Interactive "Mountain of Money" World Prop** #medium ✅ 2026-10-26
+  - Modeled interactive central cash pile prop (`Money`) in plot center with dollar bill textures & white cartoon rim highlight (`Highlight`, `OutlineTransparency = 0.1`).
+  - Dynamic vertical scaling: min Y = 1.0 (flat puddle), max Y = 20.0 (tall mountain of cash) scaling proportionally up to 25k offline earnings.
+  - Rock-solid ground anchoring: bottom face stays anchored at ground level (`bottomY + targetY / 2`) with zero floor clipping or elevation shift.
+  - Pet pass-through & raycast protection: `CanCollide = false` and `CanQuery = false` so pets walk through the pile on the flat floor without colliding or climbing.
+  - Floating Check-UI `OfflineClaimGui` BillboardGui: `"OFFLINE CLAIM!"` (GothamBlack, lime `#98FF00`, 4px stroke) and amount (`$18K`, GothamBlack, white, 4.5px stroke) hovering right above the mountain peak.
+  - Multi-method claim interaction: [[ZonePlus]] v3.2.0 spatial trigger (`playerEntered`), `ProximityPrompt` ("Claim Offline Cash"), and `Touched` event with server token-bucket rate limiter debounce.
+  - Smooth visual shrink tween: pile smoothly animates down to Y = 1.0 upon claim using `EasingStyle.Back`.
 - [ ] **[TASK-04] Community Engagement Perks: Group Join & Favorite Rewards** #medium
   - Server validation via `Player:IsInGroup(GROUP_ID)`.
   - Profile state tracking (`GroupRewardClaimed`, `FavoriteRewardClaimed`).
