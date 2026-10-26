@@ -153,7 +153,10 @@ Integrated open-source `Satchel` v1.4.1 (`ryanlua/satchel`) with TopbarPlus v3.4
   - **Slots 3 - 10:** Dynamic inventory / collected crates / consumable items.
 - **Auto-Displacement:** If an incoming tool arrives, it populates `FindLowestEmpty(forTool)` starting from slot 3. If a Bat or Trap arrives later, it claims slot 1 or 2, gracefully displacing any existing occupant to slot 3+.
 - **Check-UI Simulator Theme:** Styled via module attributes: slate background `#0F141A` (transparency 0.25), 8px corner radius, vibrant neon green equip stroke `#28C840` (4px border).
-- **CoreGui Disabling:** Automatically enforces `StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)` on initialization.
+- **CoreGui Disabling & De-duplication:** Enforces `StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)` via an asynchronous 30-attempt retry loop on initial load and on `Player.CharacterAdded`. Eliminates visual duplicate slot numbers (`1 1`, `2 2`) and text overlap caused by Roblox's default backpack rendering behind Satchel.
+- **Topbar & Hotkey Resilience:** Defaults `WholeThingEnabled = true` and fails gracefully if `StarterGui:GetCore("TopbarEnabled")` is unregistered by Roblox CoreScripts. Wraps hotkey callbacks in dedicated closures to guarantee valid `self` binding on `slot:Select()`.
+- **Live Humanoid Resolution:** `slot:Select()` dynamically queries `Player.Character:FindFirstChildOfClass("Humanoid")` at invocation time rather than caching stale humanoids across respawns, ensuring 100% reliable tool equipping via number keys (`1`, `2`, `3`...).
+- **Defensive Trap Deployment:** Traps are permitted in both open exploration zones and base/safe zone pens to allow players to defend their crates against thieves. Trap indicators align with floor normals and update dynamically with remaining charges (`TrapsLeft`).
 
 ---
 
