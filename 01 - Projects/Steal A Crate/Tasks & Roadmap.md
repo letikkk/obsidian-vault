@@ -52,10 +52,21 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
   - Server validation via `Player:IsInGroup(GROUP_ID)`.
   - Profile state tracking (`GroupRewardClaimed`, `FavoriteRewardClaimed`).
   - Button State Triad: `Claim`, `Claimed`, `Locked / Join Group`.
-- [ ] **[TASK-05] Economy & Progression Balance Pass** #high
-  - Centralize economy numeric constants in `ReplicatedStorage.Data`.
-  - Smooth first 5 minutes progression curve (first upgrade under 90s).
-  - Scale crate spawn interval & payout curves against upgrade thresholds.
+- [x] **[TASK-05] Economy & Progression Balance Pass (90-Minute Dunes Target)** #high ✅ 2026-10-26
+  - Centralized crate weight, slowdown curves, and economy scaling across Forest -> Beach -> Snow -> Dunes.
+  - Calibrated enemy chase speeds (`ForestOldMan` 24 -> `KingCrab` 38 -> `Yeti` 56 -> `Insurrectionist` 76).
+  - Scaled Treadmill progression: Level 1 (free, +10), Level 2 ($1.5k, +30), Level 3 ($12k, +75), Level 4 ($85k, +175), Level 5 ($350k, +750).
+  - Stealing Dunes crates now requires ~3.2M SpeedPoints and Treadmill Level 5, targeting ~90 minutes of active progression.
+- [x] **[TASK-INVENTORY] Satchel Backpack Engine & Fixed Quickslots** #high ✅ 2026-10-26
+  - Integrated open-source Satchel inventory engine (DevForum 2451549 / RyanLua Satchel v1.4.1 + TopbarPlus v3.4.0).
+  - Hard-locked Bat to Hotbar Slot 1 and Trap to Hotbar Slot 2; drag-and-drop disabled and swap rejection enforced.
+  - Converted client loader into clean `StarterPlayerScripts.SatchelLoader` LocalScript with zero duplicate execution warnings.
+- [x] **[TASK-ZONES] Dunes Zone Banner & Desert Ambience** #medium ✅ 2026-10-26
+  - Added Dunes zone boundary coordinates ($Z \le -350.5$) and `Dunes 🏜️` golden banner popup (`Color3.fromRGB(255, 220, 140)`).
+  - Wired procedural desert ambient loop (`DesertAmbience`) with pitch modulation.
+- [x] **[TASK-PROMPTS] ProximityPrompt Purge for Upgrade Boards** #medium ✅ 2026-10-26
+  - Purged ProximityPrompts from `TreadmillUpgrade` and `Pet upgrade` signs in workspace, replicated assets, and `PlotTemplate`.
+  - Upgrades are now exclusively activated via direct SurfaceGui button interactions.
 - [ ] **[TASK-06] General Bug Fixes, Network Optimization & QoL Polish** #medium
   - Audit console logs to maintain zero uncaught runtime errors.
   - Cross-device safe-zone UI boundary testing on mobile devices.

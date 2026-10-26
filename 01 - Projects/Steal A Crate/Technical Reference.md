@@ -131,15 +131,43 @@ High-resolution 3D rendered interface and shop icons deployed across HUDs, Shop 
 
 ## 🏃 Treadmill Progression Specification
 
-Configured in `ServerScriptService.Main.Services.TreadmillService` and synced with `PlotTemplate.UpgradeSign`.
+Configured in `ServerScriptService.Main.Services.TreadmillService` and synced with `PlotTemplate.UpgradeSign`. Calibrated for balanced 90-minute (~1.5 hours) natural progression curve to survive and steal from Dunes.
 
-| Level | Gain / Tick | Upgrade Cost | Model Name | PrimaryPart |
+| Level | Gain / Tick (0.2s) | Gain / Sec | Upgrade Cost | Model Name | PrimaryPart |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Level 1** | +2 Speed | +10 Speed/s | Starter Default | `Treadmilllvl1` | `Part` |
+| **Level 2** | +6 Speed | +30 Speed/s | $1,500 | `Treadmilllvl2` | `Black` |
+| **Level 3** | +15 Speed | +75 Speed/s | $12,000 | `Treadmilllvl3` | `Black` |
+| **Level 4** | +35 Speed | +175 Speed/s | $85,000 | `Treadmilllvl4` | `Black` |
+| **Level 5** | +150 Speed | +750 Speed/s | $350,000 | `TreadmillLVL5` / `Treadmilllvl5` | `Black` |
+
+---
+
+## 🎒 Satchel Inventory System & Slot Lock Policy
+
+Integrated open-source `Satchel` v1.4.1 (`ryanlua/satchel`) with TopbarPlus v3.4 under `StarterPlayer.StarterPlayerScripts.SatchelLoader` (`LocalScript`).
+
+- **Locked Hotbar Slots:**
+  - **Slot 1:** Permanently reserved for `Bat` (`isBat(tool)` check). Cannot be dragged or swapped.
+  - **Slot 2:** Permanently reserved for `Trap` (`isTrap(tool)` check). Cannot be dragged or swapped.
+  - **Slots 3 - 10:** Dynamic inventory / collected crates / consumable items.
+- **Auto-Displacement:** If an incoming tool arrives, it populates `FindLowestEmpty(forTool)` starting from slot 3. If a Bat or Trap arrives later, it claims slot 1 or 2, gracefully displacing any existing occupant to slot 3+.
+- **Check-UI Simulator Theme:** Styled via module attributes: slate background `#0F141A` (transparency 0.25), 8px corner radius, vibrant neon green equip stroke `#28C840` (4px border).
+- **CoreGui Disabling:** Automatically enforces `StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)` on initialization.
+
+---
+
+## 🏜️ Biome Spatial Zones & Ambiences
+
+Tracked via `StarterPlayer.StarterPlayerScripts.Main.Controllers.ZoneController`:
+
+| Zone Id | Display Name | Z Coordinate Bounds | Text Color | Ambient Audio (`Sounds/`) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Level 1** | +1 Speed | Starter Default | `Treadmilllvl1` | `Part` |
-| **Level 2** | +3 Speed | $250 | `Treadmilllvl2` | `Black` |
-| **Level 3** | +8 Speed | $1,500 | `Treadmilllvl3` | `Black` |
-| **Level 4** | +20 Speed | $7,500 | `Treadmilllvl4` | `Black` |
-| **Level 5** | +40 Speed | $35,000 | `TreadmillLVL5` / `Treadmilllvl5` | `Black` |
+| **SafeZone** | Safe Zone 🛡️ | `Z > -65.5` | `RGB(220, 255, 220)` | `BackgroundMusic` |
+| **Forest** | Forest 🙂 | `-140.5 < Z <= -65.5` | `RGB(225, 240, 255)` | `ForestAmbience` |
+| **Beach** | Beach 🏖️ | `-235.5 < Z <= -140.5` | `RGB(255, 235, 175)` | `BeachAmbience` |
+| **Snow** | Snow ❄️ | `-350.5 < Z <= -235.5` | `RGB(200, 240, 255)` | `SnowAmbience` |
+| **Dunes** | Dunes 🏜️ | `Z <= -350.5` | `RGB(255, 220, 140)` | `DesertAmbience` |
 
 ---
 
