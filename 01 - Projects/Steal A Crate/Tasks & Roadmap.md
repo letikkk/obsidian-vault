@@ -41,12 +41,13 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
   - Client-side feedback: tactile `SuccessSound` chime, rising pop-up text (`+$18K`, GothamBlack, lime neon `#98FF00`, black UIStroke) with tween fadeout, sparkle particle burst, and Check-UI `MessageHandler` toast.
 - [x] **[TASK-03] Interactive "Mountain of Money" World Prop** #medium ✅ 2026-10-26
   - Modeled interactive central cash pile prop (`Money`) in plot center with dollar bill textures & white cartoon rim highlight (`Highlight`, `OutlineTransparency = 0.1`).
-  - Dynamic vertical scaling: min Y = 1.0 (flat puddle), max Y = 20.0 (tall mountain of cash) scaling proportionally up to 25k offline earnings.
-  - Rock-solid ground anchoring: bottom face stays anchored at ground level (`bottomY + targetY / 2`) with zero floor clipping or elevation shift.
-  - Pet pass-through & raycast protection: `CanCollide = false` and `CanQuery = false` so pets walk through the pile on the flat floor without colliding or climbing.
-  - Floating Check-UI `OfflineClaimGui` BillboardGui: `"OFFLINE CLAIM!"` (GothamBlack, lime `#98FF00`, 4px stroke) and amount (`$18K`, GothamBlack, white, 4.5px stroke) hovering right above the mountain peak.
-  - Multi-method claim interaction: [[ZonePlus]] v3.2.0 spatial trigger (`playerEntered`), `ProximityPrompt` ("Claim Offline Cash"), and `Touched` event with server token-bucket rate limiter debounce.
-  - Smooth visual shrink tween: pile smoothly animates down to Y = 1.0 upon claim using `EasingStyle.Back`.
+  - Dynamic vertical scaling: min Y = 1.0, max Y = 20.0 scaling proportionally up to $25k offline earnings.
+  - Sized to span the full base pen width & depth ($42 \times 42$ studs base, expanding automatically with pen fence upgrades).
+  - Rock-solid ground anchoring: grounded at $Y = 10.05$ with raycast floor alignment to map geometry with zero floor sinking.
+  - Step-to-claim interaction: purged all ProximityPrompts; claims instantly by walking/stepping onto the pile via client Heartbeat bounding-box query + server ZonePlus & Touched fallbacks.
+  - Visible only on join when offline income exists (`OfflineCash > 0`). When offline earnings are zero, pile is fully invisible (`Transparency = 1`, all texture layers transparent, outline & billboard disabled).
+  - Smooth removal on claim: tweens down to floor level and fades transparency to 1 simultaneously, removing the pile completely.
+  - Player spawn point relocated: moved `SpawnPoint` in `PlotTemplate` outside in front of the base entrance walkway near the treadmill, oriented looking into the pen. Players spawn facing their base with an unobstructed view of the base interior and the giant offline cash pile.
 - [ ] **[TASK-04] Community Engagement Perks: Group Join & Favorite Rewards** #medium
   - Server validation via `Player:IsInGroup(GROUP_ID)`.
   - Profile state tracking (`GroupRewardClaimed`, `FavoriteRewardClaimed`).
