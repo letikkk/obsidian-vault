@@ -67,10 +67,11 @@ Parent Hub: [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]] · Kanba
 - [x] **[TASK-PROMPTS] ProximityPrompt Purge for Upgrade Boards** #medium ✅ 2026-10-26
   - Purged ProximityPrompts from `TreadmillUpgrade` and `Pet upgrade` signs in workspace, replicated assets, and `PlotTemplate`.
   - Upgrades are now exclusively activated via direct SurfaceGui button interactions.
-- [ ] **[TASK-06] General Bug Fixes, Network Optimization & QoL Polish** #medium
-  - Audit console logs to maintain zero uncaught runtime errors.
-  - Cross-device safe-zone UI boundary testing on mobile devices.
-  - Physics anti-sink grounding verification across all crate tiers.
+- [x] **[TASK-06] General Bug Fixes, Network Optimization & QoL Polish** #medium ✅ 2026-10-27
+  - Resolved asset type mismatch errors in `TutorialController` by extracting underlying image asset IDs (`rbxassetid://135597858720677` and `rbxassetid://70378970941187`).
+  - Mobile viewport & touch control safety: audited ScreenGui safe insets (`DeviceSafeInsets`), positioned `DayNightHUD` with responsive touch-offset (`-130px`) to prevent overlap with the mobile jump button.
+  - Physics anti-sink floor grounding audit: unified mathematical bounding-box bottom offset in `SetupCratesService` drop logic and world spawns (`bottomRelPivot`), verified 20 crates in live play mode at exact $Y = 10.00$ flush on terrain.
+  - Zero uncaught Luau runtime errors verified across client and server in live Play mode.
 
 - [ ] Connect Obsidian vault notes with repository git workflow #low
 

@@ -10,7 +10,6 @@ tags:
 ## 📥 Backlog
 
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-04]** Community Engagement Perks: Group Join & Favorite Rewards (server GroupService check, triad state) #medium
-- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-06]** General Bug Fixes, Network Optimization & QoL Polish (console audit, safe-zone boundaries) #medium
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Build Plot upgrade shop (expanded holding pens, faster conveyor belts) #high
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Implement Rebirth progression system with speed gain multipliers #high
 - [ ] [[02 - Areas/Check-UI Design System|Check-UI]]: Build 7-Day Daily Rewards Modal (3x2 grid + Rainbow Day 7 card) #medium
@@ -24,6 +23,8 @@ tags:
 - [ ] [[02 - Areas/World Building & Level Design|World Building]]: Audit zone boundary collision meshes to prevent player flinging out of map #medium
 
 ## ✅ Done
+
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-06]** General Bug Fixes, Mobile Viewport & Physics Polish (resolved asset mismatch errors, responsive touch offset for DayNightHUD, mathematical crate anti-sink grounding across all biomes, zero console errors verified in Play mode) #medium
 
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-05]** Economy & Progression Balance Pass (90m Dunes target, enemy speed scaling, Treadmill LVL 5 curve, crate slowdown & weights) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-INVENTORY]** Satchel Backpack System with locked Bat (Slot 1) & Trap (Slot 2) + CoreGui deduplication #high
