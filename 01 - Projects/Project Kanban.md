@@ -10,7 +10,6 @@ tags:
 ## 📥 Backlog
 
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-04]** Community Engagement Perks: Group Join & Favorite Rewards (server GroupService check, triad state) #medium
-- [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-05]** Economy & Progression Balance Pass (early game pacing, upgrade curves, spawn intervals) #high
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-06]** General Bug Fixes, Network Optimization & QoL Polish (console audit, safe-zone boundaries) #medium
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Build Plot upgrade shop (expanded holding pens, faster conveyor belts) #high
 - [ ] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: Implement Rebirth progression system with speed gain multipliers #high
@@ -26,6 +25,9 @@ tags:
 
 ## ✅ Done
 
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-05]** Economy & Progression Balance Pass (90m Dunes target, enemy speed scaling, Treadmill LVL 5 curve, crate slowdown & weights) #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-INVENTORY]** Satchel Backpack System with locked Bat (Slot 1) & Trap (Slot 2) + CoreGui deduplication #high
+- [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-ZONES]** Dunes 🏜️ zone banner & DesertAmbience loop integration #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-02]** Offline Earnings / Idle AFK Income System (ProfileStore LastLogoutTimestamp, 12h cap, getPlayerIncomeRate, OfflineCashService, OfflineCashController, floating pop-up text, particle burst, SuccessSound) #high
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-03]** Interactive "Mountain of Money" World Prop (central Money pile, Y: 1.0 to 20.0, ground bottom anchoring, CanQuery=false & CanCollide=false pet pass-through, ZonePlus v3.2.0 volume trigger, GothamBlack lime BillboardGui, shrink tween) #medium
 - [x] [[01 - Projects/Steal A Crate/Steal A Crate|Steal A Crate]]: **[TASK-01]** First-Time User Experience (FTUE): Guaranteed Tutorial Crate & 5-Step Funnel (TutorialService, TutorialController, ground chevron arrows, cartoon pointer hand, fast 3s open, guaranteed Scarf Bear, $250 reward, AnalyticsService funnel) #high
